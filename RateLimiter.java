@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class RateLimiter {
+
+    private final int limit;
+    private final long windowMillis;
+
+    private Map<String, Queue<Long>> map = new HashMap<>();
+
+    public RateLimiter(int limit, int windowSeconds) {
+        this.limit = limit;
+        this.windowMillis = windowSeconds * 1000L;
+    }
+
+    public boolean allow(String userId) {
+
+        long now = System.currentTimeMillis();
+
+        map.putIfAbsent(userId, new LinkedList<>());
+        Queue<Long> q = map.get(userId);
+
+        
+        while (!q.isEmpty() && now - q.peek() >= windowMillis) {
+            q.poll();
+        }
+
+        if (q.size() < limit) {
+            q.add(now);
+            return true;
+        }
+
+        return false;
+    }
+}
