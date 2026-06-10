@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class RateLimiter {
-// Maximum requests allowed in the given time window
+    // Maximum requests allowed in the given time window
     private final int limit;
     private final long windowMillis;
 
