@@ -3,6 +3,7 @@ import java.util.*;
 public class RateLimiter {
     // Maximum requests allowed in the given time window
     private final int limit;
+    // Time window converted into milliseconds
     private final long windowMillis;
 
     private Map<String, Queue<Long>> map = new HashMap<>();
