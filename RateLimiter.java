@@ -5,6 +5,7 @@ public class RateLimiter {
     private final int limit;
     // Time window converted into milliseconds
     private final long windowMillis;
+    // Stores request timestamps for each user
 
     private Map<String, Queue<Long>> map = new HashMap<>();
 
