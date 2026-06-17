@@ -20,6 +20,7 @@ public class RateLimiter {
 
         long now = System.currentTimeMillis();
 
+        // Create a queue for the user if it doesn't exist
         map.putIfAbsent(userId, new LinkedList<>());
         Queue<Long> q = map.get(userId);
 
