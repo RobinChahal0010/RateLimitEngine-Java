@@ -16,6 +16,7 @@ public class RateLimiter {
     }
 
     public boolean allow(String userId) {
+         // Current request timestamp
 
         long now = System.currentTimeMillis();
 
