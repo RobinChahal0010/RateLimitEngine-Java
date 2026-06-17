@@ -7,7 +7,7 @@ public class RateLimiter {
     private final long windowMillis;
     // Stores request timestamps for each user
     // Key   -> User ID
-    // hashMap
+    // Value -> Queue of request timestamps
     private Map<String, Queue<Long>> map = new HashMap<>();
 
     public RateLimiter(int limit, int windowSeconds) {
