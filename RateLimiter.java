@@ -25,6 +25,7 @@ public class RateLimiter {
         Queue<Long> q = map.get(userId);
 
         
+        // Remove all expired requests
         while (!q.isEmpty() && now - q.peek() >= windowMillis) {
             q.poll();
         }
