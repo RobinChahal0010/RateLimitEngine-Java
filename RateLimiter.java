@@ -31,6 +31,7 @@ public class RateLimiter {
             q.poll();
         }
 
+        // Allow request if user has not exceeded the limit
         if (q.size() < limit) {
             q.add(now);
             return true;
