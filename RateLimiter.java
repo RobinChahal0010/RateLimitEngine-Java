@@ -26,6 +26,7 @@ public class RateLimiter {
 
         
         // Remove all expired requests
+        // Requests older than the configured window are discarded
         while (!q.isEmpty() && now - q.peek() >= windowMillis) {
             q.poll();
         }
