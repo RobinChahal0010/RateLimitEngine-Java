@@ -7,6 +7,7 @@ public class Main {
 
         System.out.println("===== RATE LIMITER SYSTEM =====");
 
+        // Read user information
         System.out.print("Enter User ID: ");
         String user = sc.nextLine();
 
