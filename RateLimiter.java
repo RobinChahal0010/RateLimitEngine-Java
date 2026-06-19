@@ -39,6 +39,7 @@ public class RateLimiter {
             return true;
         }
 
+        // Request limit exceeded
         return false;
     }
 }
