@@ -11,6 +11,7 @@ public class Main {
         System.out.print("Enter User ID: ");
         String user = sc.nextLine();
 
+        // Maximum requests allowed
         System.out.print("Enter Limit (requests): ");
         int limit = sc.nextInt();
 
