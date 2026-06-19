@@ -33,6 +33,8 @@ public class RateLimiter {
 
         // Allow request if user has not exceeded the limit
         if (q.size() < limit) {
+            
+            // Store current request timestamp
             q.add(now);
             return true;
         }
