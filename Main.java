@@ -19,6 +19,7 @@ public class Main {
         System.out.print("Enter Time Window (seconds): ");
         int window = sc.nextInt();
 
+        // Number of requests to simulate
         System.out.print("Enter number of requests to simulate: ");
         int requests = sc.nextInt();
 
