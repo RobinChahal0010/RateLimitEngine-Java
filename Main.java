@@ -15,6 +15,7 @@ public class Main {
         System.out.print("Enter Limit (requests): ");
         int limit = sc.nextInt();
 
+        // Time window for rate limiting
         System.out.print("Enter Time Window (seconds): ");
         int window = sc.nextInt();
 
